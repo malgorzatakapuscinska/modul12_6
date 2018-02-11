@@ -40,8 +40,12 @@ function searchCountries(){
 			 var capital = $('<td>').text(item.capital);
 			 var area = $('<td>').text(item.area + " km2");
 			 var population = $('<td>').text(item.population);
-			 var currencies = $('<td>').text(item.currencies);
-			  
+			 var currenciesArray = item.currencies;
+			 var currenciesObject = currenciesArray[0];
+			 var currencies = "code: " + currenciesObject.code + ", name: " +  currenciesObject.name + ", symbol: " + currenciesObject.symbol;
+			 
+			 //CREATING RABLE'S ROW
+			 
 			 headerRow.append(flagImg);
 			 headerRow = headerRow.append(name);
 			 capitalRow = capitalRow.append(capital);
@@ -49,9 +53,12 @@ function searchCountries(){
 			 populationRow = populationRow.append(population);
 			 currenciesRow = currenciesRow.append(currencies);
 			 
+			 //ADDING ROWS TO CAUNTRY'S TABLE
+			 
 			 headerRow.appendTo(countryTable);
 			 tableDescriptionRow.appendTo(countryTable);
 			 capitalRow.appendTo(countryTable);
+			 areaRow.appendTo(countryTable);
 			 populationRow.appendTo(countryTable);
 			 currenciesRow.appendTo(countryTable);
 			 
