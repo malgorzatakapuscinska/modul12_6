@@ -1,9 +1,10 @@
 var url = 'https://restcountries.eu/rest/v1/name/';
 var countriesList = $('#countries');
 
-$('#search').click(searchCountries); 
+$('#search').click(searchCountries);
 
 function searchCountries(){
+	
 	var countryName = $('#country-name').val(); //pobiera nazwę państwa podaną przez uzytkownika za pomocą formularza
 	/*console.log(countryName);
 	console.log(countryName.length);*/
@@ -12,14 +13,20 @@ function searchCountries(){
 	
 	var url = 'https://restcountries.eu/rest/v2/name/';
 	var searchUrl = url + countryName;
-	console.log(searchUrl);
+	/*console.log(searchUrl);*/
+	
+	//Sending a requesr
 	
 	$.ajax({
 	    dataType: "json",
 	    method: 'GET',
 	    url: searchUrl,
 	    data: null,
-	    success: schowCountriesList
+	    success: schowCountriesList,
+	    fail: function(){
+	    	countriesList.empty();
+	    	$('#countries').text('błąd serera lub brak państwa o podanej nazwie');
+	    }
 	});
 	
 	function schowCountriesList(resp) {
@@ -62,8 +69,9 @@ function searchCountries(){
 			 populationRow.appendTo(countryTable);
 			 currenciesRow.appendTo(countryTable);
 			 
+			 //adding table to coutriesList
+			 
 			 countryTable.appendTo(countriesList);
 			});
-		}
-} 
-
+	} 
+}
