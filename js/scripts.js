@@ -53,8 +53,7 @@ function searchCountries(){
 			 tableDescriptionRow.appendTo(countryTable);
 			 capitalRow.appendTo(countryTable);
 			 populationRow.appendTo(countryTable);
-			 currenciesRow.appendT
-			 o(countryTable);
+			 currenciesRow.appendTo(countryTable);
 			 
 			 countryTable.appendTo(countriesList);
 			});
