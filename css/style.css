@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.btn-search {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+
+table img {
+  height: 76px;
+  border: 1px solid black;
+}
+
+table th {
+  font-size: 15px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  line-height: 0;
+  padding: 5px;
+}
+
+table tr:nth-child(2) {
+  border-bottom: 1px solid black;
+}
+
+table td {
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
