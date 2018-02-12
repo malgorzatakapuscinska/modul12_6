@@ -17,6 +17,10 @@ h1, h2 {
   margin: 0 auto;
 }
 
+button, input {
+  min-width: 120px;
+}
+
 table {
   width: 50%;
   margin: 0 auto;
@@ -24,11 +28,10 @@ table {
   padding: 10px;
   border-collapse: collapse;
   margin-bottom: 20px;
-  vertical-align: middle;
 }
 
 table img {
-  height: 76px;
+  width: 100px;
   border: 1px solid black;
 }
 
@@ -36,7 +39,7 @@ table th {
   font-size: 15px;
   text-align: left;
   border-bottom: 1px solid black;
-  line-height: 0;
+  /*line-height: 0;*/
   padding: 5px;
 }
 
@@ -48,6 +51,16 @@ table td {
   padding: 5px;
   border: 1px solid black;
   font-size: 15px;
+}
+
+table td:first-child {
+  width: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  table {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
