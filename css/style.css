@@ -39,7 +39,6 @@ table th {
   font-size: 15px;
   text-align: left;
   border-bottom: 1px solid black;
-  /*line-height: 0;*/
   padding: 5px;
 }
 
@@ -57,9 +56,15 @@ table td:first-child {
   width: 100px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
   table {
-    width: 80%;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  table {
+    width: 90%;
   }
 }
 
