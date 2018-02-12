@@ -26,7 +26,7 @@ function searchCountries(){
 	    success: schowCountriesList,
 	}).fail(function(){
     	countriesList.empty();
-    	$('#countries').text('Błąd serera lub brak państwa o podanej nazwie').css('text-align', 'center');   
+    	$('#countries').text('Błąd serwera lub brak państwa o podanej nazwie').css('text-align', 'center');   
 	});
 	
 	function schowCountriesList(resp) {
