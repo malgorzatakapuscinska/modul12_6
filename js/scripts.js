@@ -11,7 +11,6 @@ function searchCountries(){
 	if(!countryName.length) countryName = 'Poland';
 	/*console.log(countryName);*/
 	
-	var url = 'https://restcountries.eu/rest/v2/name/';
 	var searchUrl = url + countryName;
 	/*console.log(searchUrl);*/
 	
